@@ -1,0 +1,96 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+body {
+  background: radial-gradient(circle at center, #0f2027, #203a43, #2c5364);
+  font-family: 'Orbitron', sans-serif;
+  color: #00fff0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px 50px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+  border: 2px solid #00fff0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #00ffe5;
+  text-shadow: 0 0 10px #00ffe5, 0 0 20px #00ffff;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.cell {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid #00fff0;
+  border-radius: 12px;
+  font-size: 2.5rem;
+  color: #00ffe5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+.cell:hover {
+  background: rgba(0, 255, 255, 0.1);
+  box-shadow: 0 0 20px #00ffe5;
+  transform: scale(1.05);
+}
+
+#status {
+  margin-top: 15px;
+  font-size: 1.3rem;
+  color: #fff;
+  text-shadow: 0 0 10px #00ffe5;
+}
+
+#restart-btn {
+  background: linear-gradient(45deg, #00ffe5, #007bff);
+  color: black;
+  font-weight: 700;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: 'Orbitron', sans-serif;
+  transition: 0.3s ease;
+}
+
+#restart-btn:hover {
+  background: linear-gradient(45deg, #007bff, #00ffe5);
+  color: white;
+  box-shadow: 0 0 15px #00ffe5;
+  transform: scale(1.05);
+}
+
+/* Winning Animation */
+.win {
+  background: linear-gradient(135deg, #00ffe5, #0088ff);
+  color: black;
+  animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 10px #00ffe5; }
+  to { box-shadow: 0 0 25px #00ffff; }
+}
